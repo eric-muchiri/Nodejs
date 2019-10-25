@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "node from the ground up",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric-muchiri/Nodejs.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Eric Muchiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eric-muchiri/Nodejs/issues"
+  },
+  "homepage": "https://github.com/eric-muchiri/Nodejs#readme"
+}
