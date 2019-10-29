@@ -22,3 +22,17 @@ We have a number of ways to install express from the npm repository
   }`  
 *body-parser* - Enables us to parse html, json, read data from forms e.t.c  
 `*` - Enables us to get the latest version  
+
+## Into express  
+
+Import express and body-parser in your js file  
+(applies to other js modules as well)  
+`var app = express()` - Invoking express  
+
+__Middleware__  
+A function with acess to the response and request objects within the cycle  
+They can:  
+*Execute code  
+*Change the reqests and response  
+*Call the next middleware  
+*End the cycle  
