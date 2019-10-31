@@ -43,3 +43,14 @@ A package to use with node:
 *Watches changes in files and automatically restarts the server  
 __Install globally with__
 `npm install nodemon -g`
+
+## Routing static files  
+
+After importing path we can use it.  
+Add middleware:  
+`app.use(express.static(path.join(__dirname, 'public')));`  
+`__dirname` - We want the current directory  
+`public` - The name of the folder. public assets can be placed here  
+  
+opening the browser on the url:  
+`127.0.0.1:3000/hello.html` - Reads a file hello.html from the public folder  

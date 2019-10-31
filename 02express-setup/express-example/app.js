@@ -15,6 +15,7 @@ app.use(function(req, res, next){
 //body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //routes
 //route for a get request
