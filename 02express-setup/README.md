@@ -36,3 +36,10 @@ They can:
 *Change the reqests and response  
 *Call the next middleware  
 *End the cycle  
+
+## Nodemon
+
+A package to use with node:  
+*Watches changes in files and automatically restarts the server  
+__Install globally with__
+`npm install nodemon -g`
