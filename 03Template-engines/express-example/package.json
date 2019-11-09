@@ -9,7 +9,8 @@
   "author": "Eric-muchiri",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "*",
     "express": "*",
-    "body-parser": "*"
+    "pug": "^2.0.4"
   }
 }
