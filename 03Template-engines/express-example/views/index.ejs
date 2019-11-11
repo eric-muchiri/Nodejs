@@ -1,0 +1,11 @@
+<h1>Hello from ejs</h1>
+<h2><%= title %></h2>
+
+<!-- conditional -->
+<% if (showTitle) { %>
+    <h2><%= title %></h2>
+    <% } %>
+
+<% people.forEach(function(person){ %>
+    <li><%= person %></li>
+<%}) %>

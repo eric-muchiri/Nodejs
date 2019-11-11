@@ -2,7 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var pug = require('pug');
+//var pug = require('pug');
 
 var port = 3000;
 
@@ -15,7 +15,10 @@ app.use(function(req, res, next){
 });
 
 //set the view engine(after installing pug)
-app.set('view engine', 'pug');
+//app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
+//setting the vies folder pug picks it automatically
+app.set('views', path.join(__dirname, 'views'));
 
 //body-parser
 app.use(bodyParser.json());
