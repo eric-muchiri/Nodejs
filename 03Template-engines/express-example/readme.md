@@ -8,20 +8,27 @@ We are going to use pug formerly jade
 ```npm
 npm install pug --save  
 ```
+
 ## using pug  
 
-__Import__  
+__Import__
+
 ```javascript 
 var pug = require('pug');
 ```
+
 __set the view engine(after installing pug)__  
+
 ```javascript
 app.set('view engine', 'pug');
 ```
-__Create a `views` folder and add an `index.pug` file__  
+
+__Create a `views` folder and add an `index.pug` file__
+
 ```pug
 h1 Welcome
 ```
+
 __Referencing the file__
 In the app.js
 
@@ -29,8 +36,10 @@ In the app.js
 app.get('/', function(req, res){
     res.render('index');
 ```
+
 __Rendering on condition__
 Set the condition
+
 ```javascript
 showTitle: false
 ```
