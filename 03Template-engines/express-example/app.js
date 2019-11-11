@@ -29,7 +29,8 @@ app.get('/', function(req, res){
     res.render('index', {
         //dynamic values
         title: 'Hello World',
-        showTitle: false
+        showTitle: true,
+        people: ['John', 'Steve', 'Eric']
     });
 });
 //route for an about page
