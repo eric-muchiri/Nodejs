@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
+    "ejs": "^2.7.1",
     "express": "*",
     "pug": "^2.0.4"
   }
