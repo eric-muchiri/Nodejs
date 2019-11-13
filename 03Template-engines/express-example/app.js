@@ -38,7 +38,10 @@ app.get('/', function(req, res){
 });
 //route for an about page
 app.get('/about', function(req, res){
-    res.send('About page');
+    res.render('about');
+});
+app.get('/contact', function(req, res){
+    res.render('contact');
 });
 
 app.listen(port);
