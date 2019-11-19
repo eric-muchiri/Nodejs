@@ -16,3 +16,10 @@ Document database - Data is stored in json-like documents
 Similar to a row of data in a relational database  
 Collections - Set of documents  
 Similar to tables in an rdbms  
+  
+__Download Mongo__  
+Download the installer fom [here](https://www.mongodb.com/download-center/community)  Instal mongo and in the bin directory run
+  
+```bash
+ mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongodb.log --logappend --rest --install
+```
