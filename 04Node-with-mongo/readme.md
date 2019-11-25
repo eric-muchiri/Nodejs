@@ -37,6 +37,12 @@ Getting into the mongo shell
 mongo
 ```
 
+List databases
+
+```mongo
+show dbs
+```
+
 showing databases
 
 ```mongo
