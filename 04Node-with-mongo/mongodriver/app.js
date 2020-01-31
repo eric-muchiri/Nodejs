@@ -11,7 +11,11 @@ MongoClient.connect(url, function(err, db){
         db.close();
     });
 */  
-    InsertDocuments(db, function(){
+    /*InsertDocuments(db, function(){
+        db.close();
+    });
+    */
+    FindDocuments(db, function(){
         db.close();
     });
 });
@@ -57,5 +61,17 @@ const InsertDocuments = function(db, callback){
         }
         console.log('Inserted '+ result.ops.length+' Documents');
         callback(result);
+    });
+}
+
+const FindDocuments = function(db, callback){
+    const collection = db.collection('users');
+    collection.find({}).toArray(function(err, docs){
+        if(err){
+            return console.dir(err);
+        }
+        console.log('found the following records');
+        console.log(docs);
+        callback(docs);
     });
 }
