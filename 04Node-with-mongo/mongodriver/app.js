@@ -6,8 +6,12 @@ MongoClient.connect(url, function(err, db){
         return console.dir(err);
     }
     console.log("connected to Mongodb");
-
+/*
     InsertDocument(db, function(){
+        db.close();
+    });
+*/  
+    InsertDocuments(db, function(){
         db.close();
     });
 });
@@ -25,6 +29,33 @@ const InsertDocument = function(db, callback){
         }
         console.log('Inserted Document');
         console.log(result);
+        callback(result);
+    });
+}
+
+//Insert multiple Documents
+const InsertDocuments = function(db, callback){
+    //Get collection
+    const collection = db.collection('users')
+    collection.insertMany([
+        {
+            name:'john doe',
+            email:'jdoe@srt.me',
+        },
+        {
+            name:'dan bitr',
+            email:'dab@srt.me',
+        },
+        {
+            name:'fin kinn',
+            email:'finme@srt.me',
+        }
+    ],
+    function(err, result){
+        if(err){
+            return console.dir(err);
+        }
+        console.log('Inserted '+ result.ops.length+' Documents');
         callback(result);
     });
 }
