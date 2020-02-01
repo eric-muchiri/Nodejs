@@ -21,7 +21,12 @@ MongoClient.connect(url, function(err, db){
         db.close();
     });
     */
+   /*
     QueryDocuments(db, function(){
+        db.close();
+    });
+    */
+   UpdateDocument(db, function(){
         db.close();
     });
 });
@@ -81,7 +86,7 @@ const FindDocuments = function(db, callback){
         callback(docs);
     });
 }
-
+//Query Documents
 const QueryDocuments = function(db, callback){
     const collection = db.collection('users');
     collection.find({'name' : 'Eric Muchiri'}).toArray(function(err, docs){
@@ -93,3 +98,17 @@ const QueryDocuments = function(db, callback){
         callback(docs);
     });
 }
+//Update Document
+const UpdateDocument = function(db, callback){
+    const collection = db.collection('users');
+
+    collection.updateOne({name: 'john doe'}, {$set: {email: 'jdoe@sth.com'}}, 
+        function(err, result){
+            if(err){
+                return console.dir(err);
+            }
+            console.log("Updated Document");
+            callback(result);
+    });
+}
+
