@@ -26,7 +26,11 @@ MongoClient.connect(url, function(err, db){
         db.close();
     });
     */
-   UpdateDocument(db, function(){
+   /*UpdateDocument(db, function(){
+        db.close();
+    });
+    */
+    RemoveDocument(db, function(){
         db.close();
     });
 });
@@ -102,13 +106,26 @@ const QueryDocuments = function(db, callback){
 const UpdateDocument = function(db, callback){
     const collection = db.collection('users');
 
-    collection.updateOne({name: 'john doe'}, {$set: {email: 'jdoe@sth.com'}}, 
+    collection.updateOne({name: 'john doe'}, {$set: {email: 'jdoe@sth.com'}},
+    //the $set specifies a field to update otherwise the entire object is replaced 
         function(err, result){
             if(err){
                 return console.dir(err);
             }
             console.log("Updated Document");
             callback(result);
+    });
+}
+//Remove Document
+const RemoveDocument = function(db, callback){
+    const collection = db.collection('users');
+
+    collection.deleteOne({name: 'john doe'}, function(err, result){
+        if(err){
+            return console.dir(err);
+        }
+        console.log('Removed document');
+        console.log(result);
     });
 }
 
