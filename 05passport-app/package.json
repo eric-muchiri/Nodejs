@@ -1,0 +1,14 @@
+{
+  "name": "05passport-app",
+  "version": "1.0.0",
+  "description": "A simple app using passport alongside other modules",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "passport"
+  ],
+  "author": "Eric Muchiri",
+  "license": "ISC"
+}
