@@ -55,3 +55,10 @@ app.use(function(req, res, next){
     res.locals.messages = require('express-messages')(req, res);
     next();
 });
+
+//routes
+app.use('/', routes);
+app.use('/users', users);
+
+app.listen(3000);
+console.log('server started on port 3000');
