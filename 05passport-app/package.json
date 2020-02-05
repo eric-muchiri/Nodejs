@@ -4,6 +4,7 @@
   "description": "A simple app using passport alongside other modules",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon",
     "test": "npm test"
   },
   "keywords": [
@@ -20,7 +21,7 @@
     "express": "^4.17.1",
     "express-messages": "^1.0.1",
     "express-session": "^1.17.0",
-    "express-validator": "^6.4.0",
+    "express-validator": "^2.20.8",
     "mongojs": "^3.1.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
