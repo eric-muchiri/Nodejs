@@ -1,5 +1,25 @@
 <%- include('includes/header') %> 
 
-fegister PAGE
+<form class="form-signin">
+    <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">User Registration</h1>
+    <label class="sr-only">Name</label>
+    <input type="text" name="name" class="form-control" placeholder="Name" required autofocus>
+    <br>
+    <label class="sr-only">Email</label>
+    <input type="text" name="email" class="form-control" placeholder="Email" required autofocus>
+    <br>
+    <label class="sr-only">Username</label>
+    <input type="text" name="name" class="form-control" placeholder="Username" required autofocus>
+    <br>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password" class="form-control" placeholder="Password" required>
+    <br>
+    <label for="inputPassword" class="sr-only">Confirm Password</label>
+    <input type="password" name="password2" class="form-control" placeholder="Password Confirm" required>
+    <p>Already registered?<a href="/users/login"> Login</a></p>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+  </form>
 
 <%- include('includes/footer') %> 
